@@ -38,6 +38,12 @@
 
 ![image](https://github.com/NimaDosOFF/CalculatorCPP/assets/133951460/eaafab01-7c5c-47ff-9703-8b6d9161d83e)
 
-# При отсутствии синтаксических и логических ошибок у нас все работает!
+## При отсутствии синтаксических и логических ошибок у нас все работает!
 
 ![ezgif-4-3853d0d049](https://github.com/NimaDosOFF/CalculatorCPP/assets/133951460/8d5e943e-3f1b-4546-9d7a-fc49f3840a1e)
+
+## Контакты
+- VK : [Дмитрий Носов](https://vk.com/nimadosov)
+- [Telegram](https://t.me/dosoff)
+- mail : noa3eng@yandex.ru
+
