@@ -43,6 +43,7 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^ buttonPlus;
 	private: System::Windows::Forms::Button^ buttonEqual;
 	private: System::Windows::Forms::TextBox^ textResult;
+	private: System::Windows::Forms::Button^ button1;
 
 
 
@@ -68,6 +69,7 @@ namespace Project1 {
 			this->buttonPlus = (gcnew System::Windows::Forms::Button());
 			this->buttonEqual = (gcnew System::Windows::Forms::Button());
 			this->textResult = (gcnew System::Windows::Forms::TextBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// buttonDivide
@@ -75,7 +77,7 @@ namespace Project1 {
 			this->buttonDivide->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDivide->Location = System::Drawing::Point(13, 162);
-			this->buttonDivide->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->buttonDivide->Margin = System::Windows::Forms::Padding(4);
 			this->buttonDivide->Name = L"buttonDivide";
 			this->buttonDivide->Size = System::Drawing::Size(161, 64);
 			this->buttonDivide->TabIndex = 0;
@@ -88,7 +90,7 @@ namespace Project1 {
 			this->buttonTimes->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonTimes->Location = System::Drawing::Point(13, 91);
-			this->buttonTimes->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->buttonTimes->Margin = System::Windows::Forms::Padding(4);
 			this->buttonTimes->Name = L"buttonTimes";
 			this->buttonTimes->Size = System::Drawing::Size(161, 64);
 			this->buttonTimes->TabIndex = 3;
@@ -101,7 +103,7 @@ namespace Project1 {
 			this->buttonMinus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonMinus->Location = System::Drawing::Point(187, 162);
-			this->buttonMinus->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->buttonMinus->Margin = System::Windows::Forms::Padding(4);
 			this->buttonMinus->Name = L"buttonMinus";
 			this->buttonMinus->Size = System::Drawing::Size(179, 64);
 			this->buttonMinus->TabIndex = 4;
@@ -116,7 +118,7 @@ namespace Project1 {
 			this->buttonPlus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonPlus->Location = System::Drawing::Point(187, 91);
-			this->buttonPlus->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->buttonPlus->Margin = System::Windows::Forms::Padding(4);
 			this->buttonPlus->Name = L"buttonPlus";
 			this->buttonPlus->Size = System::Drawing::Size(179, 64);
 			this->buttonPlus->TabIndex = 5;
@@ -127,10 +129,10 @@ namespace Project1 {
 			// 
 			this->buttonEqual->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonEqual->Location = System::Drawing::Point(92, 234);
-			this->buttonEqual->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->buttonEqual->Location = System::Drawing::Point(13, 234);
+			this->buttonEqual->Margin = System::Windows::Forms::Padding(4);
 			this->buttonEqual->Name = L"buttonEqual";
-			this->buttonEqual->Size = System::Drawing::Size(179, 74);
+			this->buttonEqual->Size = System::Drawing::Size(161, 74);
 			this->buttonEqual->TabIndex = 6;
 			this->buttonEqual->Text = L"=";
 			this->buttonEqual->UseVisualStyleBackColor = true;
@@ -139,7 +141,7 @@ namespace Project1 {
 			// textResult
 			// 
 			this->textResult->Location = System::Drawing::Point(13, 39);
-			this->textResult->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textResult->Margin = System::Windows::Forms::Padding(4);
 			this->textResult->Name = L"textResult";
 			this->textResult->Size = System::Drawing::Size(353, 22);
 			this->textResult->TabIndex = 7;
@@ -147,18 +149,31 @@ namespace Project1 {
 			this->textResult->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::textResult_KeyDown);
 			this->textResult->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::textResult_KeyUp);
 			// 
+			// button1
+			// 
+			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button1->Location = System::Drawing::Point(187, 233);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(179, 74);
+			this->button1->TabIndex = 8;
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(379, 321);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textResult);
 			this->Controls->Add(this->buttonEqual);
 			this->Controls->Add(this->buttonPlus);
 			this->Controls->Add(this->buttonMinus);
 			this->Controls->Add(this->buttonTimes);
 			this->Controls->Add(this->buttonDivide);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::MyForm_KeyUp);
@@ -213,6 +228,9 @@ private: System::Void buttonEqual_Click(System::Object^ sender, System::EventArg
 	if (operation == "/") textResult->Text = Convert::ToString(number1 / number2);
 }
 private: System::Void textResult_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->textResult->Text = "";
 }
 };
 }
